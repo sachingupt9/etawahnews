@@ -1,0 +1,54 @@
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 1080px){
+  .hero-grid{grid-template-columns:1fr;}
+  .news-grid{grid-template-columns:repeat(3,1fr);}
+  .category-block{grid-template-columns:1fr;}
+  .stats-grid{grid-template-columns:repeat(2,1fr);}
+  .principles-grid{grid-template-columns:repeat(2,1fr);}
+  .team-grid{grid-template-columns:repeat(2,1fr);}
+  .video-grid{grid-template-columns:repeat(2,1fr);}
+  .contact-grid{grid-template-columns:1fr;}
+  .admin-shell{grid-template-columns:1fr;}
+  .admin-sidebar{display:none;}
+  .stat-cards{grid-template-columns:repeat(2,1fr);}
+}
+
+@media (max-width: 860px){
+  .main-nav .nav-list{
+    display:none;flex-direction:column;width:100%;
+    position:absolute;top:100%;left:0;background:var(--color-primary);
+    box-shadow:var(--shadow-lg);max-height:0;overflow:hidden;
+  }
+  .main-nav .nav-list.open{display:flex;max-height:600px;padding:6px 0;}
+  .main-nav{position:relative;}
+  .main-nav .container{flex-wrap:wrap;}
+  .hamburger{display:block;}
+  .nav-list a{padding:14px 20px;border-bottom:1px solid rgba(255,255,255,0.08);}
+
+  .news-grid{grid-template-columns:repeat(2,1fr);}
+  .hero-feature img{height:280px;}
+  .hero-feature h1{font-size:1.6rem;}
+  .masthead-inner{flex-wrap:wrap;justify-content:center;text-align:center;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .form-row{grid-template-columns:1fr;}
+}
+
+@media (max-width: 600px){
+  .container{padding:0 16px;}
+  .news-grid{grid-template-columns:1fr;}
+  .video-grid{grid-template-columns:1fr;}
+  .stats-grid{grid-template-columns:1fr 1fr;}
+  .principles-grid{grid-template-columns:1fr;}
+  .team-grid{grid-template-columns:1fr 1fr;}
+  .logo{font-size:1.5rem;}
+  .article-header h1{font-size:1.7rem;}
+  .article-body{font-size:1rem;}
+  .article-nav{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .footer-bottom{flex-direction:column;text-align:center;}
+  .stat-cards{grid-template-columns:1fr 1fr;}
+  .side-story img{width:76px;height:58px;}
+  .toast-container{left:16px;right:16px;bottom:16px;}
+  .toast{min-width:0;max-width:none;width:100%;}
+}

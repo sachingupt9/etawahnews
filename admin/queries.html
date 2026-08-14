@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Query Management | Public Voice Admin</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/animations.css">
+</head>
+<body class="admin-body">
+<div class="admin-shell">
+<aside class="admin-sidebar">
+  <div class="logo">PUBLIC<span style="color:var(--color-accent);">VOICE</span></div>
+  <nav class="admin-nav">
+    <a href="dashboard.html" data-nav="dashboard">📊 Dashboard</a>
+    <a href="queries.html" data-nav="queries">📥 Query Management</a>
+    <a href="news-management.html" data-nav="news">📰 News Management</a>
+    <a href="../index.html">🌐 View Site</a>
+  </nav>
+</aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <div>
+        <h1 style="font-size:1.5rem;margin-bottom:2px;">Query Management</h1>
+        <p style="color:var(--color-text-secondary);font-size:0.86rem;">All contact-form submissions, stored in ContactQueries.xlsx.</p>
+      </div>
+      <button class="icon-btn theme-toggle" aria-label="Toggle dark mode"><span class="sun">☀</span><span class="moon">☾</span></button>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <div class="filter-bar">
+          <input type="search" id="filter-search" placeholder="Search name, email, Query ID...">
+          <select id="filter-status">
+            <option value="">All Statuses</option>
+            <option>New</option>
+            <option>In Progress</option>
+            <option>Resolved</option>
+            <option>Closed</option>
+          </select>
+          <select id="filter-type">
+            <option value="">All Query Types</option>
+            <option>General Query</option>
+            <option>News Tip</option>
+            <option>Feedback</option>
+            <option>Complaint</option>
+            <option>Advertisement</option>
+            <option>Partnership</option>
+            <option>Technical Support</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <button class="btn btn-accent btn-sm" id="export-btn">⬇ Export to Excel</button>
+      </div>
+      <div style="overflow-x:auto;">
+        <table class="data-table">
+          <thead><tr>
+            <th>Query ID</th><th>Name</th><th>Email</th><th>Mobile</th><th>Subject</th><th>Type</th><th>Date</th><th>Status</th><th>Action</th>
+          </tr></thead>
+          <tbody id="queries-table-body"><tr><td colspan="9">Loading queries...</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="modal-overlay" id="query-modal-overlay">
+  <div class="modal">
+    <button class="modal-close" aria-label="Close">✕</button>
+    <div class="modal-body"></div>
+  </div>
+</div>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/admin.js"></script>
+</body>
+</html>

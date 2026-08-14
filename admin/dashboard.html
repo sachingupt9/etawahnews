@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard | Public Voice</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/animations.css">
+</head>
+<body class="admin-body">
+<div class="admin-shell">
+<aside class="admin-sidebar">
+  <div class="logo">PUBLIC<span style="color:var(--color-accent);">VOICE</span></div>
+  <nav class="admin-nav">
+    <a href="dashboard.html" data-nav="dashboard">📊 Dashboard</a>
+    <a href="queries.html" data-nav="queries">📥 Query Management</a>
+    <a href="news-management.html" data-nav="news">📰 News Management</a>
+    <a href="../index.html">🌐 View Site</a>
+  </nav>
+</aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <div>
+        <h1 style="font-size:1.5rem;margin-bottom:2px;">Dashboard</h1>
+        <p style="color:var(--color-text-secondary);font-size:0.86rem;">Overview of queries and content, live from the backend API.</p>
+      </div>
+      <button class="icon-btn theme-toggle" aria-label="Toggle dark mode"><span class="sun">☀</span><span class="moon">☾</span></button>
+    </div>
+
+    <div class="stat-cards" id="dashboard-stats">
+      <div class="admin-stat"><div class="num">0</div><div class="lbl">Total Queries</div></div>
+      <div class="admin-stat"><div class="num">0</div><div class="lbl">New Queries</div></div>
+      <div class="admin-stat"><div class="num">0</div><div class="lbl">In Progress</div></div>
+      <div class="admin-stat"><div class="num">0</div><div class="lbl">Resolved</div></div>
+    </div>
+
+    <div class="stat-cards">
+      <div class="admin-stat"><div class="num">12</div><div class="lbl">Total News</div></div>
+      <div class="admin-stat"><div class="num">11</div><div class="lbl">Published News</div></div>
+      <div class="admin-stat"><div class="num">1</div><div class="lbl">Draft News</div></div>
+      <div class="admin-stat"><div class="num">2</div><div class="lbl">Featured Stories</div></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <h3>Recent Queries</h3>
+        <a href="queries.html" class="btn btn-sm btn-outline">View All →</a>
+      </div>
+      <div style="overflow-x:auto;">
+        <table class="data-table">
+          <thead><tr><th>Query ID</th><th>Name</th><th>Email</th><th>Mobile</th><th>Type</th><th>Status</th></tr></thead>
+          <tbody id="recent-queries-body"><tr><td colspan="6">Loading...</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/admin.js"></script>
+</body>
+</html>

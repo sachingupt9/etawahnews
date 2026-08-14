@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Article | Public Voice</title>
+<meta name="description" content="Full story from Public Voice.">
+<link rel="canonical" href="https://www.publicvoice.example/article.html">
+<script type="application/ld+json" id="article-structured-data">
+{"@context":"https://schema.org","@type":"NewsArticle","headline":"Public Voice Article"}
+</script>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<header class="site-header">
+  <div class="header-top">
+    <div class="container">
+      <span><span class="live-dot" aria-hidden="true"></span>LIVE — <span data-current-date></span></span>
+      <a href="admin/dashboard.html" style="font-family:var(--font-mono);">Admin</a>
+    </div>
+  </div>
+  <div class="masthead">
+    <div class="container masthead-inner">
+      <div style="width:80px;"></div>
+      <div>
+        <div class="logo">PUBLIC<span>VOICE</span></div>
+        <div class="tagline">News. People. Perspective.</div>
+      </div>
+      <div class="header-actions">
+        <button class="icon-btn search-toggle" aria-label="Toggle search">⌕</button>
+        <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+          <span class="sun">☀</span><span class="moon">☾</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <nav class="main-nav" aria-label="Primary">
+    <div class="container">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="news.html">Latest News</a></li>
+        <li><a href="category.html?cat=National">National</a></li>
+        <li><a href="category.html?cat=International">International</a></li>
+        <li><a href="category.html?cat=Politics">Politics</a></li>
+        <li><a href="category.html?cat=Business">Business</a></li>
+        <li><a href="category.html?cat=Technology">Technology</a></li>
+        <li><a href="category.html?cat=Sports">Sports</a></li>
+        <li><a href="category.html?cat=Entertainment">Entertainment</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
+  </nav>
+  <div class="search-panel">
+    <form class="container" role="search">
+      <input type="search" placeholder="Search news, categories, keywords..." aria-label="Search">
+      <button type="submit" class="btn btn-accent">Search</button>
+    </form>
+  </div>
+</header>
+
+<main id="main-content">
+  <article class="section" style="padding-top:20px;">
+    <div class="container">
+      <div class="article-header">
+        <span class="badge accent" data-article-category>Category</span>
+        <h1 data-article-title>Loading article...</h1>
+        <p class="article-subtitle" data-article-subtitle></p>
+        <div class="article-byline">
+          <span class="dateline"><strong>By</strong> <span data-article-author></span></span>
+          <span class="dateline" data-article-date></span>
+          <span class="dateline" data-article-updated></span>
+        </div>
+      </div>
+      <figure class="article-figure" data-article-image></figure>
+      <figcaption style="max-width:900px;margin:-16px auto 24px;text-align:center;font-size:0.82rem;color:var(--color-text-secondary);font-style:italic;" data-article-caption></figcaption>
+
+      <div class="article-body" data-article-body></div>
+
+      <div class="share-bar">
+        <span class="dateline" style="align-self:center;">Share:</span>
+        <a class="btn btn-sm btn-outline" data-share="twitter" target="_blank" rel="noopener">X / Twitter</a>
+        <a class="btn btn-sm btn-outline" data-share="facebook" target="_blank" rel="noopener">Facebook</a>
+        <a class="btn btn-sm btn-outline" data-share="linkedin" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-sm btn-outline" data-share="whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+
+      <div class="tag-list" data-article-tags></div>
+
+      <div class="article-nav">
+        <a href="#" id="article-prev" class="prev">
+          <div class="label">← Previous</div>
+          <div class="title"></div>
+        </a>
+        <a href="#" id="article-next" class="next">
+          <div class="label">Next →</div>
+          <div class="title"></div>
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <section class="section" style="background:var(--color-surface);border-top:1px solid var(--color-border);">
+    <div class="container">
+      <div class="section-header"><h2>Related Stories</h2></div>
+      <div class="news-grid" id="related-news-grid"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo">PUBLIC<span>VOICE</span></div>
+        <p style="margin-top:12px;font-size:0.85rem;color:rgba(255,255,255,0.65);">Independent, public-interest journalism for every community — reported with transparency and accountability.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Sections</h4>
+        <a href="category.html?cat=National">National</a>
+        <a href="category.html?cat=International">International</a>
+        <a href="category.html?cat=Business">Business</a>
+        <a href="category.html?cat=Sports">Sports</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="videos.html">Videos</a>
+        <a href="admin/dashboard.html">Admin</a>
+      </div>
+      <div class="footer-col">
+        <h4>Follow</h4>
+        <a href="#">Twitter / X</a>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Public Voice Media. All rights reserved.</span>
+      <span>Fictional demo publication — sample content only.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/news.js"></script>
+</body>
+</html>

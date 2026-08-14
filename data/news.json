@@ -1,0 +1,243 @@
+[
+  {
+    "id": 1,
+    "slug": "national-digital-literacy-mission-launched",
+    "title": "Government Launches Nationwide Digital Literacy Mission",
+    "subtitle": "New initiative aims to bring one million citizens online with free training centres in every district.",
+    "category": "National",
+    "description": "A sweeping new public initiative was unveiled today to expand digital literacy across rural and urban districts alike, with training centres planned in over 600 locations nationwide.",
+    "content": [
+      "The Ministry of Digital Affairs announced a nationwide Digital Literacy Mission on Thursday, aiming to train more than one million citizens in basic computer and internet skills over the next three years.",
+      "Officials said the programme will prioritise rural districts, women, and senior citizens, with free training centres opening in over 600 locations by the end of the year.",
+      "\"This is about giving every citizen the tools to participate in the digital economy,\" the minister said at the launch event, flanked by state education officials and technology partners.",
+      "The mission will be delivered through a mix of physical training centres and a mobile app offering self-paced lessons in twelve regional languages.",
+      "Independent analysts welcomed the announcement but cautioned that past digital-inclusion programmes have struggled with last-mile delivery in remote areas. The ministry says it has built in quarterly public progress reports to address that concern."
+    ],
+    "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&q=80",
+    "author": "Editorial Desk",
+    "date": "2026-08-14",
+    "updated": "2026-08-14",
+    "featured": true,
+    "tags": ["Digital India", "Education", "Public Policy"]
+  },
+  {
+    "id": 2,
+    "slug": "parliament-passes-clean-energy-amendment",
+    "title": "Parliament Passes Clean Energy Amendment Bill",
+    "subtitle": "The bill sets a binding target of 50% renewable capacity by 2032.",
+    "category": "Politics",
+    "description": "Lawmakers approved sweeping amendments to the national energy framework, setting binding renewable-capacity targets for the next decade.",
+    "content": [
+      "The lower house passed the Clean Energy Amendment Bill after an extended debate, setting a binding target of 50 percent renewable generation capacity by 2032.",
+      "The legislation introduces tax incentives for rooftop solar adoption and creates a new regulatory body to fast-track transmission projects.",
+      "Opposition lawmakers supported the bill's goals but raised concerns about implementation timelines and funding for grid modernisation.",
+      "The bill now moves to the upper house, where it is expected to be taken up next month."
+    ],
+    "image": "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=1200&q=80",
+    "author": "Ritu Sharma",
+    "date": "2026-08-13",
+    "updated": "2026-08-13",
+    "featured": true,
+    "tags": ["Politics", "Energy", "Climate"]
+  },
+  {
+    "id": 3,
+    "slug": "global-summit-addresses-supply-chain-resilience",
+    "title": "Global Leaders Meet to Address Supply Chain Resilience",
+    "subtitle": "Representatives from 40 nations discuss coordinated response to shipping bottlenecks.",
+    "category": "International",
+    "description": "A two-day summit brought together trade ministers from forty countries to discuss strengthening global supply chains after repeated disruptions.",
+    "content": [
+      "Trade ministers from forty nations convened this week to discuss a coordinated approach to strengthening global supply chains.",
+      "The summit's closing statement called for shared early-warning systems for shipping disruptions and greater investment in regional manufacturing hubs.",
+      "Several delegates emphasised the need to reduce dependency on single-source suppliers for critical goods such as semiconductors and pharmaceuticals.",
+      "A follow-up meeting is scheduled for early next year to review progress on the commitments made."
+    ],
+    "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&q=80",
+    "author": "Foreign Desk",
+    "date": "2026-08-12",
+    "updated": "2026-08-12",
+    "featured": false,
+    "tags": ["International", "Trade", "Economy"]
+  },
+  {
+    "id": 4,
+    "slug": "central-bank-holds-interest-rates-steady",
+    "title": "Central Bank Holds Interest Rates Steady Amid Inflation Watch",
+    "subtitle": "Policymakers cite easing inflation but caution on global headwinds.",
+    "category": "Business",
+    "description": "The central bank's monetary policy committee voted to keep rates unchanged, citing a gradual cooling in inflation.",
+    "content": [
+      "The central bank's monetary policy committee voted unanimously to hold the benchmark interest rate steady, citing signs that inflation is gradually cooling.",
+      "In its statement, the committee said it would continue to monitor global commodity prices and currency fluctuations before considering further moves.",
+      "Market analysts had largely expected the decision, with most forecasting no change until at least the next quarterly review.",
+      "Business groups welcomed the stability, saying it would help firms plan investment with greater confidence."
+    ],
+    "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80",
+    "author": "Business Desk",
+    "date": "2026-08-12",
+    "updated": "2026-08-12",
+    "featured": false,
+    "tags": ["Business", "Economy", "Finance"]
+  },
+  {
+    "id": 5,
+    "slug": "researchers-unveil-low-cost-water-purifier",
+    "title": "Researchers Unveil Low-Cost Water Purification Device",
+    "subtitle": "The solar-powered unit could serve remote communities lacking clean water access.",
+    "category": "Technology",
+    "description": "A team of university researchers has developed a solar-powered water purification unit designed for off-grid communities.",
+    "content": [
+      "A team of engineers has unveiled a solar-powered water purification device designed to serve communities without reliable access to clean water.",
+      "The device uses a combination of UV filtration and a low-cost membrane system, and can be manufactured locally for a fraction of the cost of comparable imported units.",
+      "Field trials are set to begin in three states later this year, with support from a public health partnership.",
+      "Researchers say the technology could be adapted for disaster-relief deployment as well as permanent rural installations."
+    ],
+    "image": "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&q=80",
+    "author": "Tech Desk",
+    "date": "2026-08-11",
+    "updated": "2026-08-11",
+    "featured": false,
+    "tags": ["Technology", "Health", "Innovation"]
+  },
+  {
+    "id": 6,
+    "slug": "national-team-clinches-regional-championship",
+    "title": "National Team Clinches Regional Championship in Thrilling Final",
+    "subtitle": "A last-minute goal sealed the title after a hard-fought match.",
+    "category": "Sports",
+    "description": "The national team secured the regional championship title with a dramatic late goal in front of a capacity crowd.",
+    "content": [
+      "The national team claimed the regional championship after a tense final that was settled by a goal in the closing minutes.",
+      "Fans packed the stadium to capacity, with celebrations continuing well into the night across several cities.",
+      "The coach praised the squad's resilience, noting that the team had come from behind twice during the tournament.",
+      "Attention now turns to the upcoming qualifiers, where the squad will look to build on this momentum."
+    ],
+    "image": "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=1200&q=80",
+    "author": "Sports Desk",
+    "date": "2026-08-10",
+    "updated": "2026-08-10",
+    "featured": false,
+    "tags": ["Sports", "Football"]
+  },
+  {
+    "id": 7,
+    "slug": "film-festival-opens-with-record-entries",
+    "title": "International Film Festival Opens With Record Number of Entries",
+    "subtitle": "Over 300 films from 45 countries will screen across the ten-day event.",
+    "category": "Entertainment",
+    "description": "This year's film festival opened with a record 300-plus entries from 45 countries, reflecting growing global interest.",
+    "content": [
+      "The festival opened Thursday evening with a record 300-plus film entries submitted from 45 countries.",
+      "Organisers said the growth reflects rising interest from independent filmmakers seeking wider distribution.",
+      "The ten-day event will feature panel discussions, workshops, and a new category dedicated to short documentaries.",
+      "Award winners will be announced at a closing ceremony next weekend."
+    ],
+    "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1200&q=80",
+    "author": "Arts Desk",
+    "date": "2026-08-09",
+    "updated": "2026-08-09",
+    "featured": false,
+    "tags": ["Entertainment", "Film", "Culture"]
+  },
+  {
+    "id": 8,
+    "slug": "coastal-cities-expand-flood-resilience-projects",
+    "title": "Coastal Cities Expand Flood-Resilience Infrastructure Projects",
+    "subtitle": "New drainage and wetland-restoration projects target chronic monsoon flooding.",
+    "category": "Environment",
+    "description": "Several coastal cities have begun new flood-resilience infrastructure projects ahead of the monsoon season.",
+    "content": [
+      "Municipal authorities in several coastal cities have broken ground on new flood-resilience projects, including expanded drainage networks and wetland restoration.",
+      "The projects are designed to reduce chronic flooding that has disrupted transport and commerce during recent monsoon seasons.",
+      "Environmental groups praised the wetland-restoration component in particular, noting its dual benefit for flood control and biodiversity.",
+      "Officials say the first phase of projects should be complete before next year's monsoon."
+    ],
+    "image": "https://images.unsplash.com/photo-1500534623283-312aade485b7?w=1200&q=80",
+    "author": "Environment Desk",
+    "date": "2026-08-08",
+    "updated": "2026-08-08",
+    "featured": false,
+    "tags": ["Environment", "Infrastructure", "Climate"]
+  },
+  {
+    "id": 9,
+    "slug": "new-public-health-campaign-targets-preventive-care",
+    "title": "New Public Health Campaign Targets Preventive Care",
+    "subtitle": "Free screening camps to be held in 200 towns over the next two months.",
+    "category": "Health",
+    "description": "A new public health campaign will offer free preventive-care screenings in 200 towns over the coming two months.",
+    "content": [
+      "Health authorities launched a preventive-care campaign that will bring free screening camps to 200 towns over the next two months.",
+      "The camps will offer basic health checks, including blood pressure, blood sugar, and vision screening, at no cost.",
+      "Officials hope early detection will reduce long-term treatment costs and improve outcomes for common chronic conditions.",
+      "Mobile health units will supplement fixed camps in areas with limited clinic access."
+    ],
+    "image": "https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=1200&q=80",
+    "author": "Health Desk",
+    "date": "2026-08-07",
+    "updated": "2026-08-07",
+    "featured": false,
+    "tags": ["Health", "Public Policy"]
+  },
+  {
+    "id": 10,
+    "slug": "university-launches-scholarship-for-first-generation-students",
+    "title": "University Launches Major Scholarship Programme for First-Generation Students",
+    "subtitle": "The fund will cover full tuition for 5,000 students annually.",
+    "category": "Education",
+    "description": "A leading public university has launched a scholarship fund aimed at supporting first-generation college students.",
+    "content": [
+      "A major public university announced a new scholarship fund that will cover full tuition for 5,000 first-generation students each year.",
+      "The fund, backed by a mix of alumni donations and government matching grants, will also provide mentorship and career-placement support.",
+      "University officials said the programme responds to research showing that financial barriers remain a leading cause of college dropout.",
+      "Applications for the first cohort open next month."
+    ],
+    "image": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&q=80",
+    "author": "Education Desk",
+    "date": "2026-08-06",
+    "updated": "2026-08-06",
+    "featured": false,
+    "tags": ["Education", "Scholarship"]
+  },
+  {
+    "id": 11,
+    "slug": "startup-ecosystem-report-shows-record-funding",
+    "title": "Startup Ecosystem Report Shows Record Early-Stage Funding",
+    "subtitle": "Early-stage investment rose 28% year-on-year, led by fintech and agri-tech.",
+    "category": "Business",
+    "description": "A new industry report finds early-stage startup funding reached a record high this quarter, led by fintech and agri-tech sectors.",
+    "content": [
+      "Early-stage startup funding climbed 28 percent year-on-year this quarter, according to a new industry report, led by strong activity in fintech and agri-tech.",
+      "Investors said improving macroeconomic conditions and a wave of first-time founders from tier-two cities contributed to the growth.",
+      "The report also flagged a rise in follow-on funding, suggesting greater investor confidence in scaling existing portfolio companies.",
+      "Analysts expect the momentum to continue into the next quarter, barring global market shocks."
+    ],
+    "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=80",
+    "author": "Business Desk",
+    "date": "2026-08-05",
+    "updated": "2026-08-05",
+    "featured": false,
+    "tags": ["Business", "Startups", "Technology"]
+  },
+  {
+    "id": 12,
+    "slug": "city-metro-network-adds-two-new-lines",
+    "title": "City Metro Network Adds Two New Lines, Cutting Commute Times",
+    "subtitle": "The expansion connects three previously underserved suburbs to the city centre.",
+    "category": "National",
+    "description": "Two new metro lines opened this week, connecting underserved suburbs to the city centre and cutting average commute times.",
+    "content": [
+      "Two new metro lines opened to the public this week, extending the network into three previously underserved suburbs.",
+      "Transport officials estimate the expansion will cut average commute times for affected residents by up to 40 minutes daily.",
+      "The project, which took four years to complete, also included accessibility upgrades at twelve existing stations.",
+      "A third line is currently under construction and expected to open within two years."
+    ],
+    "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=80",
+    "author": "Editorial Desk",
+    "date": "2026-08-04",
+    "updated": "2026-08-04",
+    "featured": false,
+    "tags": ["National", "Infrastructure", "Transport"]
+  }
+]

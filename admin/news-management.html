@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News Management | Public Voice Admin</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/animations.css">
+</head>
+<body class="admin-body">
+<div class="admin-shell">
+<aside class="admin-sidebar">
+  <div class="logo">PUBLIC<span style="color:var(--color-accent);">VOICE</span></div>
+  <nav class="admin-nav">
+    <a href="dashboard.html" data-nav="dashboard">📊 Dashboard</a>
+    <a href="queries.html" data-nav="queries">📥 Query Management</a>
+    <a href="news-management.html" data-nav="news">📰 News Management</a>
+    <a href="../index.html">🌐 View Site</a>
+  </nav>
+</aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <div>
+        <h1 style="font-size:1.5rem;margin-bottom:2px;">News Management</h1>
+        <p style="color:var(--color-text-secondary);font-size:0.86rem;">Frontend demo — changes are stored locally in this browser. Wire this panel to a CMS API for production use.</p>
+      </div>
+      <button class="btn btn-accent btn-sm" id="add-news-btn">+ Add News</button>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <div class="filter-bar">
+          <input type="search" id="news-filter-search" placeholder="Search title...">
+          <select id="news-filter-category">
+            <option value="">All Categories</option>
+            <option>National</option><option>International</option><option>Politics</option>
+            <option>Business</option><option>Technology</option><option>Sports</option>
+            <option>Entertainment</option><option>Environment</option><option>Health</option><option>Education</option>
+          </select>
+          <select id="news-filter-status">
+            <option value="">All Statuses</option>
+            <option>Published</option>
+            <option>Draft</option>
+          </select>
+        </div>
+      </div>
+      <div style="overflow-x:auto;">
+        <table class="data-table">
+          <thead><tr><th>Title</th><th>Category</th><th>Author</th><th>Date</th><th>Featured</th><th>Status</th><th>Action</th></tr></thead>
+          <tbody id="news-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="modal-overlay" id="news-modal-overlay">
+  <div class="modal">
+    <button class="modal-close" aria-label="Close">✕</button>
+    <h3 id="news-modal-title">Add News</h3>
+    <form id="news-form">
+      <input type="hidden" id="news-id">
+      <div class="form-group"><label for="news-title">Title *</label><input type="text" id="news-title" required></div>
+      <div class="form-group"><label for="news-slug">Slug</label><input type="text" id="news-slug" placeholder="auto-generated if blank"></div>
+      <div class="form-row">
+        <div class="form-group"><label for="news-category">Category *</label>
+          <select id="news-category" required>
+            <option>National</option><option>International</option><option>Politics</option>
+            <option>Business</option><option>Technology</option><option>Sports</option>
+            <option>Entertainment</option><option>Environment</option><option>Health</option><option>Education</option>
+          </select>
+        </div>
+        <div class="form-group"><label for="news-author">Author</label><input type="text" id="news-author" value="Editorial Desk"></div>
+      </div>
+      <div class="form-group"><label for="news-description">Short Description *</label><textarea id="news-description" required></textarea></div>
+      <div class="form-group"><label for="news-content">Full Content</label><textarea id="news-content" placeholder="One paragraph per line"></textarea></div>
+      <div class="form-row">
+        <div class="form-group"><label for="news-image">Featured Image URL</label><input type="text" id="news-image" placeholder="https://..."></div>
+        <div class="form-group"><label for="news-video">Video URL (optional)</label><input type="text" id="news-video" placeholder="YouTube ID or URL"></div>
+      </div>
+      <div class="form-group"><label for="news-tags">Tags (comma-separated)</label><input type="text" id="news-tags"></div>
+      <div class="form-row">
+        <div class="form-group"><label for="news-status">Status</label>
+          <select id="news-status"><option>Published</option><option>Draft</option></select>
+        </div>
+        <div class="form-group">
+          <label for="news-featured" style="display:flex;align-items:center;gap:8px;margin-top:10px;">
+            <input type="checkbox" id="news-featured" style="width:auto;"> Mark as Featured
+          </label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-accent btn-block">Save News</button>
+    </form>
+  </div>
+</div>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/news.js"></script>
+<script>
+/* ---- Lightweight local news-management demo (localStorage-backed) ---- */
+const NM_KEY = 'pv-admin-news-overrides';
+let NM_BASE = [];
+let NM_OVERRIDES = JSON.parse(localStorage.getItem(NM_KEY) || '{}');
+
+function nmSave(){ localStorage.setItem(NM_KEY, JSON.stringify(NM_OVERRIDES)); }
+function nmMerged(){
+  return NM_BASE.map(item => ({ ...item, status: 'Published', ...(NM_OVERRIDES[item.id] || {}) }))
+    .concat(Object.values(NM_OVERRIDES).filter(o => o.isNew));
+}
+function nmRenderTable(){
+  const tbody = document.querySelector('#news-table-body');
+  const search = document.querySelector('#news-filter-search').value.toLowerCase();
+  const cat = document.querySelector('#news-filter-category').value;
+  const status = document.querySelector('#news-filter-status').value;
+  let items = nmMerged();
+  if (search) items = items.filter(i => i.title.toLowerCase().includes(search));
+  if (cat) items = items.filter(i => i.category === cat);
+  if (status) items = items.filter(i => (i.status || 'Published') === status);
+  tbody.innerHTML = items.map(i => `
+    <tr>
+      <td>${i.title}</td>
+      <td>${i.category}</td>
+      <td>${i.author || 'Editorial Desk'}</td>
+      <td>${i.date || ''}</td>
+      <td>${i.featured ? '⭐' : '—'}</td>
+      <td><span class="status-pill ${(i.status||'Published')==='Published' ? 'resolved' : 'progress'}">${i.status || 'Published'}</span></td>
+      <td class="row-actions">
+        <button data-edit="${i.id}">Edit</button>
+        <button data-toggle="${i.id}">${(i.status||'Published')==='Published' ? 'Unpublish' : 'Publish'}</button>
+        <button data-delete="${i.id}">Delete</button>
+      </td>
+    </tr>`).join('') || '<tr><td colspan="7">No stories match these filters.</td></tr>';
+}
+
+function nmOpenModal(item){
+  const overlay = document.querySelector('#news-modal-overlay');
+  document.querySelector('#news-modal-title').textContent = item ? 'Edit News' : 'Add News';
+  document.querySelector('#news-id').value = item ? item.id : '';
+  document.querySelector('#news-title').value = item ? item.title : '';
+  document.querySelector('#news-slug').value = item ? item.slug : '';
+  document.querySelector('#news-category').value = item ? item.category : 'National';
+  document.querySelector('#news-author').value = item ? (item.author || 'Editorial Desk') : 'Editorial Desk';
+  document.querySelector('#news-description').value = item ? item.description : '';
+  document.querySelector('#news-content').value = item && item.content ? item.content.join('\n') : '';
+  document.querySelector('#news-image').value = item ? item.image : '';
+  document.querySelector('#news-video').value = item ? (item.videoUrl || '') : '';
+  document.querySelector('#news-tags').value = item && item.tags ? item.tags.join(', ') : '';
+  document.querySelector('#news-status').value = item ? (item.status || 'Published') : 'Published';
+  document.querySelector('#news-featured').checked = item ? !!item.featured : false;
+  overlay.classList.add('open');
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+  NM_BASE = await NewsStore.load();
+  nmRenderTable();
+
+  document.querySelector('#add-news-btn').addEventListener('click', () => nmOpenModal(null));
+  ['news-filter-search','news-filter-category','news-filter-status'].forEach(id =>
+    document.querySelector('#'+id).addEventListener('input', nmRenderTable));
+
+  const overlay = document.querySelector('#news-modal-overlay');
+  overlay.addEventListener('click', e => { if (e.target === overlay) overlay.classList.remove('open'); });
+  overlay.querySelector('.modal-close').addEventListener('click', () => overlay.classList.remove('open'));
+
+  document.querySelector('#news-table-body').addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    const merged = nmMerged();
+    if (btn.dataset.edit){
+      nmOpenModal(merged.find(i => String(i.id) === btn.dataset.edit));
+    }
+    if (btn.dataset.toggle){
+      const id = btn.dataset.toggle;
+      const item = merged.find(i => String(i.id) === id);
+      const newStatus = (item.status || 'Published') === 'Published' ? 'Draft' : 'Published';
+      NM_OVERRIDES[id] = { ...(NM_OVERRIDES[id]||{}), status: newStatus };
+      nmSave(); nmRenderTable();
+      PV.toast(`Story ${newStatus.toLowerCase()}.`, 'success');
+    }
+    if (btn.dataset.delete){
+      if (confirm('Delete this story from the local admin view?')){
+        const id = btn.dataset.delete;
+        NM_OVERRIDES[id] = { ...(NM_OVERRIDES[id]||{}), deleted: true, status:'Draft' };
+        nmSave();
+        NM_BASE = NM_BASE.filter(i => String(i.id) !== id);
+        nmRenderTable();
+        PV.toast('Story removed.', 'success');
+      }
+    }
+  });
+
+  document.querySelector('#news-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const id = document.querySelector('#news-id').value || ('local-' + Date.now());
+    const title = document.querySelector('#news-title').value.trim();
+    const slug = document.querySelector('#news-slug').value.trim() || title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+    NM_OVERRIDES[id] = {
+      id, isNew: !document.querySelector('#news-id').value,
+      title, slug,
+      category: document.querySelector('#news-category').value,
+      author: document.querySelector('#news-author').value.trim(),
+      description: document.querySelector('#news-description').value.trim(),
+      content: document.querySelector('#news-content').value.split('\n').filter(Boolean),
+      image: document.querySelector('#news-image').value.trim() || 'https://images.unsplash.com/photo-1495020689067-958852a7765e?w=1200&q=80',
+      videoUrl: document.querySelector('#news-video').value.trim(),
+      tags: document.querySelector('#news-tags').value.split(',').map(t=>t.trim()).filter(Boolean),
+      status: document.querySelector('#news-status').value,
+      featured: document.querySelector('#news-featured').checked,
+      date: new Date().toISOString().slice(0,10)
+    };
+    nmSave();
+    document.querySelector('#news-modal-overlay').classList.remove('open');
+    nmRenderTable();
+    PV.toast('News story saved.', 'success');
+  });
+});
+</script>
+</body>
+</html>
